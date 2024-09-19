@@ -16,7 +16,7 @@ async function main() {
   await mongoORM.connect();
   await mongoORM.createTable("users", { name: "string", age: "number" });
   await mongoORM.insert("users", { name: "Aurik", age: 30 });
-  const usersMongo = await mongoORM.find("users", { name: "John" });
+  const usersMongo = await mongoORM.find("users", { name: "Aurik" });
   console.log("Usuarios en MongoDB:", usersMongo);
   await mongoORM.disconnect();
 
@@ -24,7 +24,7 @@ async function main() {
   await mysqlORM.connect();
   await mysqlORM.createTable("users", { name: "VARCHAR(255)", age: "INT" });
   await mysqlORM.insert("users", { name: "Aurik", age: 30 });
-  const usersMySQL = await mysqlORM.find("users", { name: "John" });
+  const usersMySQL = await mysqlORM.find("users", { name: "Aurik" });
   console.log("Usuarios en MySQL:", usersMySQL);
   await mysqlORM.disconnect();
 }
