@@ -2,7 +2,7 @@ import { ORM } from "./ORM";
 
 async function main() {
   const mongoConfig = {
-    uri: "mongodb+srv://Chatbot_JCC:vYv2BWPjtOkjQ9DA@clusterpruebas.2lmuf.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPruebas",
+    uri: "mongodb://localhost:27017",
     dbName: "testdb",
   };
   const mysqlConfig = {
